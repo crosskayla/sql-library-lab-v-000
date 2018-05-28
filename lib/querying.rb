@@ -48,6 +48,7 @@ def select_series_title_with_most_human_characters
   WHERE COUNT(species) = (
     SELECT MAX COUNT(species)
     FROM characters
+    WHERE species = "human"
     )
     )
   )
